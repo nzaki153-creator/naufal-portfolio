@@ -80,9 +80,28 @@ const projects = [
 
  return (
   <LayoutGroup>
-   <motion.div
-  className={`min-h-screen bg-black text-white font-sans`}
->
+   <motion.div 
+   className="relative min-h-screen bg-black text-white font-sans">
+
+ {/* BACKGROUND GLOBAL */}
+<div className="fixed inset-0 pointer-events-none z-[0]">
+
+  {/* GRID */}
+  <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#ffffff20_1px,transparent_1px),linear-gradient(to_bottom,#ffffff20_1px,transparent_1px)] bg-[size:80px_80px]" />
+
+  {/* GLOW */}
+  <div className="absolute top-[-200px] left-1/2 w-[700px] h-[700px] -translate-x-1/2 bg-purple-500/30 blur-[140px] rounded-full" />
+  <div className="absolute bottom-[-200px] right-[-100px] w-[600px] h-[600px] bg-blue-500/30 blur-[140px] rounded-full" />
+
+  {/* TEXT */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <div className="text-white/40 text-2xl md:text-4xl font-bold text-center px-8 leading-relaxed">
+      “Jika tidak menjual, itu bukanlah sesuatu yang kreatif.” — David Ogilvy
+    </div>
+  </div>
+
+</div>
+
 {/* Hero */}
 <motion.section
   initial={{ opacity: 0, y: 20 }}
